@@ -17,14 +17,14 @@ class _RegionLocationPageState extends State<RegionLocationPage> {
           Column(
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30),
                         bottomRight: Radius.circular(30))),
                 height: 300,
                 width: 420,
-                child: Image(
+                child: const Image(
                   image: AssetImage('images/logo1.png'),
                 ),
               ),
@@ -43,11 +43,11 @@ class _RegionLocationPageState extends State<RegionLocationPage> {
               ),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
                     child: Row(
                       children: [
                         Text(
@@ -68,7 +68,7 @@ class _RegionLocationPageState extends State<RegionLocationPage> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(6))),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         TextField(
@@ -77,23 +77,23 @@ class _RegionLocationPageState extends State<RegionLocationPage> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(6))),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.orange.shade300,
+                            backgroundColor: Colors.orange.shade300,
                             minimumSize: const Size.fromHeight(60),
                           ),
                           onPressed: () {},
-                          child: Text('EXPLORE'),
+                          child: const Text('EXPLORE'),
                         ),
                         TextButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
                           ),
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'Could not find your location?',
                             style: TextStyle(fontSize: 16, color: Colors.grey),
                           ),

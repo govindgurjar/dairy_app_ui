@@ -18,14 +18,14 @@ class _LogInPageState extends State<LogInPage> {
           Column(
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30),
                         bottomRight: Radius.circular(30))),
                 height: 300,
                 width: 420,
-                child: Image(
+                child: const Image(
                   image: AssetImage('images/logo1.png'),
                 ),
               ),
@@ -44,11 +44,11 @@ class _LogInPageState extends State<LogInPage> {
               ),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
                     child: Row(
                       children: [
                         Text(
@@ -69,16 +69,16 @@ class _LogInPageState extends State<LogInPage> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(6))),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.orange.shade300,
+                            backgroundColor: Colors.orange.shade300,
                             minimumSize: const Size.fromHeight(60),
                           ),
                           onPressed: () {},
-                          child: Text('GET OTP'),
+                          child: const Text('GET OTP'),
                         ),
                         TextButton(
                           style: ElevatedButton.styleFrom(
@@ -88,17 +88,18 @@ class _LogInPageState extends State<LogInPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: ((context) => RegionLocationPage()),
+                                builder: ((context) =>
+                                    const RegionLocationPage()),
                               ),
                             );
                           },
-                          child: Text(
+                          child: const Text(
                             'Skip',
                             style: TextStyle(fontSize: 16, color: Colors.grey),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             'By Signing in,you indicate that you have read and agreed to our Terms of Services and Privacy Policy',
                             textAlign: TextAlign.center,

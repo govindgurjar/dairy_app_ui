@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
@@ -40,15 +40,15 @@ class _HomePageState extends State<HomePage> {
           Container(
             height: 350,
             width: 420,
-            decoration: BoxDecoration(color: Colors.black),
-            child: Image(
+            decoration: const BoxDecoration(color: Colors.black),
+            child: const Image(
               image: AssetImage('images/logo1.png'),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
@@ -63,11 +63,11 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 170,
           ),
           Padding(
@@ -92,22 +92,24 @@ class _HomePageState extends State<HomePage> {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.transparent, // Background color
+                    backgroundColor: Colors.transparent, // Background color
                   ),
-                  child: Text(
+                  child: const Text(
                     'Skip',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SecondIntro()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SecondIntro()));
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white, // Background color
+                    backgroundColor: Colors.white, // Background color
                   ),
-                  child: Text(
+                  child: const Text(
                     'NEXT >',
                     style: TextStyle(color: Colors.black),
                   ),

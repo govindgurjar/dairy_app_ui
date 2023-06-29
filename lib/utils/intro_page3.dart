@@ -19,15 +19,15 @@ class _ThirdIntroState extends State<ThirdIntro> {
           Container(
             height: 350,
             width: 420,
-            decoration: BoxDecoration(color: Colors.black),
-            child: Image(
+            decoration: const BoxDecoration(color: Colors.black),
+            child: const Image(
               image: AssetImage('images/logo1.png'),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
@@ -42,11 +42,11 @@ class _ThirdIntroState extends State<ThirdIntro> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -60,7 +60,7 @@ class _ThirdIntroState extends State<ThirdIntro> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 150,
           ),
           Padding(
@@ -70,13 +70,15 @@ class _ThirdIntroState extends State<ThirdIntro> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LogInPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LogInPage()));
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
+                    backgroundColor: Colors.white,
                   ),
-                  child: Text(
+                  child: const Text(
                     'GET STARTED',
                     style: TextStyle(color: Colors.black),
                   ),
