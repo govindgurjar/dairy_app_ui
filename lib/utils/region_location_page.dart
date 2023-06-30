@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_for_pawan/home_page.dart';
 
 class RegionLocationPage extends StatefulWidget {
   const RegionLocationPage({super.key});
@@ -85,7 +86,14 @@ class _RegionLocationPageState extends State<RegionLocationPage> {
                             backgroundColor: Colors.orange.shade300,
                             minimumSize: const Size.fromHeight(60),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ((context) => const ProductPage()),
+                              ),
+                            );
+                          },
                           child: const Text('EXPLORE'),
                         ),
                         TextButton(
